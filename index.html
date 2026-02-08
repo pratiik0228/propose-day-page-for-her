@@ -2,91 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>My Love Letter to You 💌</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Playfair+Display:ital@1&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:ital@1&family=Great+Vibes&display=swap" rel="stylesheet">
     <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
-            margin: 0;
-            padding: 40px 20px;
-            min-height: 100vh;
-            background: #f5e8c7;                   /* pale vintage brown */
-            background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
-            background-size: cover;
-            font-family: 'Playfair Display', serif;
-            color: #3c2f2f;                        /* dark old-ink brown */
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            min-height:100vh;
+            background:#f4e9d0 url('https://www.transparenttextures.com/patterns/old-paper.png');
+            background-size:cover;
+            font-family:'Cinzel', serif;
+            color:#3a2e1f;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:15px;
+            overflow-x:hidden;
         }
         .letter {
-            max-width: 700px;
-            background: #f9f0d9;                   /* slightly lighter aged paper inside */
-            padding: 60px 70px;
-            border: 1px solid #d4b38a;
-            border-radius: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-            position: relative;
-            line-height: 1.9;
-            font-size: 1.25em;
-        }
-        .letter::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            border: 15px solid transparent;
-            border-image: url('https://www.transparenttextures.com/patterns/cream-paper.png') 30 stretch;
-            pointer-events: none;
-            opacity: 0.4;
+            background:rgba(250,240,220,0.95);
+            width:100%;
+            max-width:620px;
+            padding:35px 25px;
+            border:1px solid #c9a87c;
+            border-radius:10px;
+            box-shadow:0 6px 20px rgba(0,0,0,0.25);
         }
         h1 {
-            font-family: 'Great Vibes', cursive;
-            text-align: center;
-            font-size: 4.5em;
-            color: #8b4513;                        /* deep brown for cursive title */
-            margin: 0 0 50px;
-            letter-spacing: 3px;
+            font-family:'Great Vibes', cursive;
+            text-align:center;
+            font-size:3.2rem;
+            color:#7d4f1e;
+            margin-bottom:35px;
+            line-height:1.1;
         }
         p {
-            margin: 25px 0;
-            text-align: justify;
+            font-size:1.15rem;
+            line-height:1.85;
+            margin:18px 0;
+            text-align:justify;
         }
         .question {
-            font-size: 2.2em;
-            color: #a0522d;
-            text-align: center;
-            margin: 70px 0 50px;
-            font-weight: bold;
-            font-style: italic;
+            font-size:1.7rem;
+            color:#9c4f2a;
+            text-align:center;
+            margin:45px 0 35px;
+            font-weight:bold;
+            font-style:italic;
         }
         .signature {
-            text-align: right;
-            margin-top: 80px;
-            font-size: 1.4em;
-            font-style: italic;
-            color: #5c4033;
+            text-align:right;
+            margin-top:40px;
+            font-size:1.25rem;
+            font-style:italic;
+            color:#4a3728;
         }
-        .heart {
-            font-size: 1.6em;
+        .heart { font-size:1.4em; }
+        @media (max-width:480px) {
+            h1 { font-size:2.6rem; }
+            p, .question, .signature { font-size:1.05rem; }
+            .letter { padding:30px 20px; }
         }
     </style>
 </head>
 <body>
     <div class="letter">
-        <h1>[Your Greeting, e.g. My Dearest gurl</h1>
+        <h1>To My Love ❤️</h1>
 
-        <p>[i dont know how you did it, but you slowly became my fav part of every day, you know wats the my fav part of the day, you 4+ msgs on insta. I miss you every  ]</p>
+        <p>I don't know how you did it but you slowly became my favourite part of the day and you know what's the favourite part of the day? your 4+ messages on insta. I miss you everyday every moment, my day feels very boring and dull without our talks, there's a great feeling for me being with you at this moment and I will be loving staying with youu in future also,</p>
 
-        <p>[Your second paragraph here...]</p>
-
-        <p>[Your third paragraph here... build up to the question]</p>
-
-        <p class="question">Will you be with m e this year 💍</p>
+        <p class="question">I love you ❤️</p>
 
         <p class="signature">
-            Forever yours,<br>
-            Pratik <span class="heart">❤️</span><br>
-            Pune – 08 February 2026
+            Pratik <span class="heart">❤️</span>
         </p>
     </div>
 </body>
