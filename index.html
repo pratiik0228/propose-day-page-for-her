@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love Letter to You 💌💍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background: #fdf6e3 url('https://www.transparenttextures.com/patterns/old-paper.png') repeat; /* vintage paper texture */
+            color: #4a2c0d; /* old ink color */
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff8f0;
+        }
+        .envelope {
+            max-width: 800px;
+            background: #fffdf7;
+            padding: 60px 80px;
+            border: 2px solid #d4a373;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        .envelope::before {
+            content: "To My Love 💕";
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5em;
+            color: #c2185b;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.8;
+        }
+        .stamp {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 2em;
+            color: #e91e63;
+            opacity: 0.7;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            text-align: center;
+            color: #b71c1c;
+            font-size: 4em;
+            margin: 80px 0 40px;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.3em;
+            line-height: 2;
+            margin: 25px 0;
+            text-align: justify;
+        }
+        .question {
+            font-size: 2em;
+            color: #d81b60;
+            text-align: center;
+            margin: 60px 0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 80px;
+            font-size: 1.4em;
+            font-style: italic;
+        }
+        .heart {
+            animation: fadeBeat 3s infinite;
+            font-size: 1.5em;
+        }
+        @keyframes fadeBeat {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="stamp">💌</div>
+        <h1>[Greeting here, e.g., My Dearest [Her Name]]</h1>
+        
+        <p>[Your first paragraph – how you met, what she means, memories...]</p>
+        
+        <p>[Second paragraph – deeper feelings, future dreams...]</p>
+        
+        <p>[Third paragraph – why today/Propose Day, building up to the question...]</p>
+        
+        <p class="question">Will you marry me? 💍</p>
+        
+        <p class="signature">
+            With all my love, endlessly,<br>
+            Pratik <span class="heart">❤️</span><br>
+            Pune, 08 February 2026
+        </p>
+    </div>
+</body>
+</html>
