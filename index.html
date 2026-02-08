@@ -9,101 +9,95 @@
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             min-height:100vh;
-            background:#f4e9d0 url('https://www.transparenttextures.com/patterns/old-paper.png');
+            background:#5C4033 url('https://www.transparenttextures.com/patterns/old-paper.png');  /* much darker brown */
             background-size:cover;
             font-family:'Playfair Display', serif;
             font-style: italic;
-            color:#3a2e1f;
+            color:#e0d4b5;  /* light beige text for contrast */
             display:flex;
             justify-content:center;
             align-items:center;
-            padding:15px;
-            overflow-x:hidden;
+            padding:12px;
+            overflow:hidden;  /* no scroll at all */
         }
         .letter {
-            background:rgba(250,240,220,0.95);
+            background:rgba(92, 64, 51, 0.94);  /* dark brown semi-transparent card */
             width:100%;
-            max-width:620px;
-            padding:35px 25px;
-            border:1px solid #c9a87c;
-            border-radius:10px;
-            box-shadow:0 6px 20px rgba(0,0,0,0.25);
+            max-width:600px;
+            padding:30px 22px;
+            border:1px solid #3f2a1f;
+            border-radius:8px;
+            box-shadow:0 5px 18px rgba(0,0,0,0.5);
         }
         h1, .propose-day {
             font-family:'Great Vibes', cursive;
             text-align:center;
         }
         h1 {
-            font-size:3.2rem;
-            color:#7d4f1e;
-            margin-bottom:15px;
-            line-height:1.1;
+            font-size:2.9rem;
+            color:#d4a373;
+            margin-bottom:8px;
+            line-height:1;
         }
         .propose-day {
-            font-size:2.2rem;
-            color:#9c4f2a;
-            margin:10px 0 30px;
+            font-size:2rem;
+            color:#d4a373;
+            margin:8px 0 20px;
         }
         p {
-            font-size:1.25rem;
-            line-height:1.9;
-            margin:20px 0;
+            font-size:1.18rem;
+            line-height:1.55;  /* closer lines */
+            margin:12px 0;     /* reduced vertical space */
             text-align:justify;
-            letter-spacing:0.4px;
+            letter-spacing:0.3px;
         }
         .question {
-            font-size:1.8rem;
-            color:#9c4f2a;
+            font-size:1.65rem;
+            color:#e0c9a6;
             text-align:center;
-            margin:45px 0 35px;
+            margin:30px 0 25px;
             font-weight:bold;
         }
         .signature {
             text-align:right;
-            margin-top:40px;
-            font-size:1.35rem;
-            color:#4a3728;
+            margin-top:25px;
+            font-size:1.28rem;
+            color:#d4a373;
         }
-        .heart {
-            font-size:1.4em;
+        .heart-beat {
+            font-size:1.35em;
             display:inline-block;
-            animation: beat 1.2s infinite ease-in-out;
-            transform-origin: center;
+            animation: beat 1.3s infinite ease-in-out;
+            transform-origin:center;
+        }
+        .heart-static {
+            font-size:1.35em;
         }
         @keyframes beat {
-            0%, 100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.35);  /* bigger pulse for visibility */
-                opacity: 0.8;
-            }
-        }
-        /* Fallback if animation doesn't work */
-        .heart:hover {
-            transform: scale(1.4);
+            0%, 100% { transform: scale(1); opacity:1; }
+            50% { transform: scale(1.4); opacity:0.75; }
         }
         @media (max-width:480px) {
-            h1 { font-size:2.6rem; }
-            .propose-day { font-size:1.8rem; }
-            p, .question, .signature { font-size:1.1rem; }
-            .letter { padding:30px 20px; }
-            .heart { font-size:1.3em; }
+            h1 { font-size:2.4rem; }
+            .propose-day { font-size:1.7rem; margin:6px 0 18px; }
+            p { font-size:1.05rem; line-height:1.5; margin:10px 0; }
+            .question { font-size:1.45rem; margin:25px 0 20px; }
+            .signature { font-size:1.15rem; margin-top:20px; }
+            .letter { padding:25px 18px; }
         }
     </style>
 </head>
 <body>
     <div class="letter">
-        <h1>To My Love <span class="heart">❤️</span></h1>
-        <div class="propose-day">Happy Propose Day dimpiiii <span class="heart">❤️</span></div>
+        <h1>To My Love <span class="heart-beat">❤️</span></h1>
+        <div class="propose-day">Happy Propose Day dimpiuiii <span class="heart-static">❤️</span></div>
 
-        <p>I don't know how you did it but you slowly became my favourite part of the day and you know what's the favourite part of the day? your 4+ messages on insta. I miss you everyday every moment, my day feels very boring and dull without our talks, there's a great feeling for me being with you at this moment and I will be loving staying with youu in future also. I really feel calm and happy with you, i feel so lucky and grateful to have you in life, i hope we stay together for a long time, no matter what, i want us to stay strong. Thank u yararr fot being in my life and for being you mean to me </p>
+        <p>I don't know how you did it but you slowly became my favourite part of the day and you know what's the favourite part of the day? your 4+ messages on insta. I miss you everyday every moment, my day feels very boring and dull without our talks, there's a great feeling for me being with you at this moment and I will be loving staying with youu in future also. I really feel calm and happy with you, i feel so lucky and grateful to have you in life, i hope we stay together for a long time, no matter what, i want us to stay strong. Thank u yararr for being in my life and for being you mean to me</p>
 
-        <p class="question">I LOVE YOU <span class="heart">❤️</span></p>
+        <p class="question">I LOVE YOU <span class="heart-static">❤️</span></p>
 
         <p class="signature">
-            PRATIK <span class="heart">❤️</span>
+            PRATIK <span class="heart-beat">❤️</span>
         </p>
     </div>
 </body>
