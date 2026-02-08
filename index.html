@@ -18,38 +18,49 @@ body {
     overflow-x: hidden;
 }
 
-/* ================= BACKGROUND DOTS ================= */
-.dot {
+/* ===== BACKGROUND LAYER ===== */
+.background {
     position: fixed;
-    width: 3px;
-    height: 3px;
-    background: rgba(255, 215, 150, 0.18);
-    border-radius: 50%;
-    z-index: -2;
+    inset: 0;
+    z-index: 0;
 }
 
-/* ================= FLOATING HEARTS ================= */
+/* ===== TWINKLING DOTS ===== */
+.dot {
+    position: absolute;
+    background: rgba(255, 215, 150, 0.4);
+    border-radius: 50%;
+    animation: twinkle ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(1.4); }
+    100% { opacity: 0.2; transform: scale(1); }
+}
+
+/* ===== FLOATING HEARTS ===== */
 .heart {
     position: fixed;
-    bottom: -20px;
-    color: rgba(255, 0, 0, 0.25);
+    bottom: -30px;
+    color: rgba(255, 0, 0, 0.3);
     animation: floatUp linear infinite;
-    z-index: -1;
+    z-index: 1;
 }
 
 @keyframes floatUp {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0;
-    }
-    10% { opacity: 0.35; }
-    100% {
-        transform: translateY(-120vh) scale(1.3);
-        opacity: 0;
-    }
+    0% { transform: translateY(0) scale(1); opacity: 0; }
+    10% { opacity: 0.4; }
+    100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
 }
 
-/* ================= LETTER CARD ================= */
+/* ===== CONTENT ===== */
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== LETTER CARD ===== */
 .card {
     max-width: 720px;
     margin: 40px auto;
@@ -60,7 +71,7 @@ body {
     text-align: center;
 }
 
-/* ================= TEXT STYLES ================= */
+/* ===== TEXT ===== */
 .title {
     font-family: 'Great Vibes', cursive;
     font-size: 50px;
@@ -100,7 +111,7 @@ body {
     transform: rotate(-2deg);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
     .title { font-size: 42px; }
     .subtitle { font-size: 24px; }
@@ -111,32 +122,24 @@ body {
 
 <body>
 
-<!-- ========== RANDOM BACKGROUND DOTS ========== -->
-<script>
-for (let i = 0; i < 70; i++) {
-    let dot = document.createElement("div");
-    dot.className = "dot";
-    dot.style.top = Math.random() * 100 + "vh";
-    dot.style.left = Math.random() * 100 + "vw";
-    dot.style.opacity = Math.random() * 0.4;
-    document.body.appendChild(dot);
-}
-</script>
+<div class="background"></div>
 
-<!-- ========== FLOATING HEARTS ========== -->
+<div class="content">
+
+<!-- ===== FLOATING HEARTS SCRIPT ===== -->
 <script>
 for (let i = 0; i < 22; i++) {
     let heart = document.createElement("div");
     heart.className = "heart";
     heart.innerHTML = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (6 + Math.random() * 6) + "s";
     heart.style.fontSize = (14 + Math.random() * 22) + "px";
+    heart.style.animationDuration = (6 + Math.random() * 6) + "s";
     document.body.appendChild(heart);
 }
 </script>
 
-<!-- ========== LETTER CONTENT ========== -->
+<!-- ===== LETTER ===== -->
 <div class="card">
     <div class="title">To My Love ❤️</div>
     <div class="subtitle">Happy Propose Day dimpiiii</div>
@@ -156,9 +159,31 @@ for (let i = 0; i < 22; i++) {
     </div>
 
     <div class="love">I LOVE YOU ❤️</div>
-
     <div class="signature">— Pratik ❤️</div>
 </div>
+
+</div>
+
+<!-- ===== TWINKLING DOTS SCRIPT ===== -->
+<script>
+const bg = document.querySelector(".background");
+
+for (let i = 0; i < 90; i++) {
+    let dot = document.createElement("div");
+    dot.className = "dot";
+
+    let size = 2 + Math.random() * 3;
+    dot.style.width = size + "px";
+    dot.style.height = size + "px";
+
+    dot.style.top = Math.random() * 100 + "vh";
+    dot.style.left = Math.random() * 100 + "vw";
+    dot.style.animationDuration = (3 + Math.random() * 5) + "s";
+    dot.style.animationDelay = Math.random() * 5 + "s";
+
+    bg.appendChild(dot);
+}
+</script>
 
 </body>
 </html>
