@@ -11,8 +11,8 @@
             min-height:100vh;
             background:#f4e9d0 url('https://www.transparenttextures.com/patterns/old-paper.png');
             background-size:cover;
-            font-family:'Playfair Display', serif;  /* elegant italic serif - no dancing script */
-            font-style: italic;  /* makes it feel soft/romantic */
+            font-family:'Playfair Display', serif;
+            font-style: italic;
             color:#3a2e1f;
             display:flex;
             justify-content:center;
@@ -67,28 +67,40 @@
         .heart {
             font-size:1.4em;
             display:inline-block;
-            animation: beat 1.4s infinite ease-in-out;
+            animation: beat 1.2s infinite ease-in-out;
+            transform-origin: center;
         }
         @keyframes beat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.25); }
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.35);  /* bigger pulse for visibility */
+                opacity: 0.8;
+            }
+        }
+        /* Fallback if animation doesn't work */
+        .heart:hover {
+            transform: scale(1.4);
         }
         @media (max-width:480px) {
             h1 { font-size:2.6rem; }
             .propose-day { font-size:1.8rem; }
             p, .question, .signature { font-size:1.1rem; }
             .letter { padding:30px 20px; }
+            .heart { font-size:1.3em; }
         }
     </style>
 </head>
 <body>
     <div class="letter">
-        <h1>To My Love ❤️</h1>
-        <div class="propose-day">Happy Propose Day ❤️</div>
+        <h1>To My Love <span class="heart">❤️</span></h1>
+        <div class="propose-day">Happy Propose Day dimpiiii <span class="heart">❤️</span></div>
 
-        <p>I don't know how you did it but you slowly became my favourite part of the day and you know what's the favourite part of the day? your 4+ messages on insta. I miss you everyday every moment, my day feels very boring and dull without our talks, there's a great feeling for me being with you at this moment and I will be loving staying with youu in future also,</p>
+        <p>I don't know how you did it but you slowly became my favourite part of the day and you know what's the favourite part of the day? your 4+ messages on insta. I miss you everyday every moment, my day feels very boring and dull without our talks, there's a great feeling for me being with you at this moment and I will be loving staying with youu in future also. I really feel calm and happy with you, i feel so lucky and grateful to have you in life, i hope we stay together for a long time, no matter what, i want us to stay strong. Thank u yararr fot being in my life and for being you mean to me </p>
 
-        <p class="question">I LOVE YOU ❤️</p>
+        <p class="question">I LOVE YOU <span class="heart">❤️</span></p>
 
         <p class="signature">
             PRATIK <span class="heart">❤️</span>
