@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>My Love Letter to You 💌</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Playfair+Display:ital@1&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
             min-height:100vh;
             background:#f4e9d0 url('https://www.transparenttextures.com/patterns/old-paper.png');
             background-size:cover;
-            font-family:'Cinzel', serif;
+            font-family:'Playfair Display', serif;  /* elegant italic serif - no dancing script */
+            font-style: italic;  /* makes it feel soft/romantic */
             color:#3a2e1f;
             display:flex;
             justify-content:center;
@@ -28,39 +29,54 @@
             border-radius:10px;
             box-shadow:0 6px 20px rgba(0,0,0,0.25);
         }
-        h1 {
+        h1, .propose-day {
             font-family:'Great Vibes', cursive;
             text-align:center;
+        }
+        h1 {
             font-size:3.2rem;
             color:#7d4f1e;
-            margin-bottom:35px;
+            margin-bottom:15px;
             line-height:1.1;
         }
+        .propose-day {
+            font-size:2.2rem;
+            color:#9c4f2a;
+            margin:10px 0 30px;
+        }
         p {
-            font-size:1.15rem;
-            line-height:1.85;
-            margin:18px 0;
+            font-size:1.25rem;
+            line-height:1.9;
+            margin:20px 0;
             text-align:justify;
+            letter-spacing:0.4px;
         }
         .question {
-            font-size:1.7rem;
+            font-size:1.8rem;
             color:#9c4f2a;
             text-align:center;
             margin:45px 0 35px;
             font-weight:bold;
-            font-style:italic;
         }
         .signature {
             text-align:right;
             margin-top:40px;
-            font-size:1.25rem;
-            font-style:italic;
+            font-size:1.35rem;
             color:#4a3728;
         }
-        .heart { font-size:1.4em; }
+        .heart {
+            font-size:1.4em;
+            display:inline-block;
+            animation: beat 1.4s infinite ease-in-out;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.25); }
+        }
         @media (max-width:480px) {
             h1 { font-size:2.6rem; }
-            p, .question, .signature { font-size:1.05rem; }
+            .propose-day { font-size:1.8rem; }
+            p, .question, .signature { font-size:1.1rem; }
             .letter { padding:30px 20px; }
         }
     </style>
@@ -68,13 +84,14 @@
 <body>
     <div class="letter">
         <h1>To My Love ❤️</h1>
+        <div class="propose-day">Happy Propose Day ❤️</div>
 
         <p>I don't know how you did it but you slowly became my favourite part of the day and you know what's the favourite part of the day? your 4+ messages on insta. I miss you everyday every moment, my day feels very boring and dull without our talks, there's a great feeling for me being with you at this moment and I will be loving staying with youu in future also,</p>
 
-        <p class="question">I love you ❤️</p>
+        <p class="question">I LOVE YOU ❤️</p>
 
         <p class="signature">
-            Pratik <span class="heart">❤️</span>
+            PRATIK <span class="heart">❤️</span>
         </p>
     </div>
 </body>
